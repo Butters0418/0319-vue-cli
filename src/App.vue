@@ -1,20 +1,34 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    {{name}}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/"  class="nav-link active">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/newpage" class="nav-link">新分頁</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link :to="{name: '這是新分頁'}"  class="nav-link">新分頁</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <router-view />
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-secondary">Secondary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-light">Light</button>
-  <button type="button" class="btn btn-dark">Dark</button>
 
-  <button type="button" class="btn btn-link">Link</button>
+  <!-- <nav class="nav">
+    <router-link to="/"  class="nav-link active">Home</router-link>
+    <router-link to="/about" class="nav-link">About</router-link>
+    <router-link to="/newpage" class="nav-link">新分頁</router-link>
+    <router-link :to="{name: '這是新分頁'}"  class="nav-link">新分頁</router-link>
+  </nav> -->
+  <div class="container text-center">
+    <router-view/>
+  </div>
 </template>
 
 <script>
